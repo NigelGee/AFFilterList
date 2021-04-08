@@ -1,0 +1,85 @@
+//
+//  FilterList.swift
+//  FilterList-Master
+//
+//  Created by Nigel Gee on 08/04/2021.
+//
+
+import SwiftUI
+
+/// A List that filter the data on a give key(s)
+public struct FilterList<Element: Identifiable, RowContent: View>: View {
+    @State private var filteredItems = [Element]()
+    @State private var filterString = ""
+
+    let listItems: [Element]
+    let filterKeyPaths: [KeyPath<Element, String>]
+    let text: LocalizedStringKey
+    let image: String?
+    let content: (Element) -> RowContent
+
+    /// Only data, filterKeys and RowContent is required
+    /// - Parameters:
+    ///   - data: A collection of identifiable data for computing the list.
+    ///   - filterKeys: Variadic String for filtering.
+    ///   - placeholder: String that in the box. Default is "Search".
+    ///   - systemImage: Optional String for SF Symbol. Default is "magnifyingglass". insert nil for text only.
+    ///   - rowContent: A view builder that creates the view for a single row of the list.
+    public init(_ data: [Element],
+         filterKeys: KeyPath<Element, String>...,
+         placeholder: LocalizedStringKey = "Search",
+         systemImage: String? = "magnifyingglass",
+         @ViewBuilder rowContent: @escaping (Element) -> RowContent
+    ) {
+        listItems = data
+        filterKeyPaths = filterKeys
+        text = placeholder
+        image = systemImage
+        content = rowContent
+    }
+
+    public var body: some View {
+        VStack {
+            HStack {
+                if let image = image {
+                    Image(systemName: image)
+                        .foregroundColor(Color.secondary.opacity(0.4))
+                }
+                TextField(text, text: $filterString.ifChange(applyFilter))
+            }
+            .padding(5)
+            .background(Color.secondary.opacity(0.2))
+            .cornerRadius(10)
+            .padding(.horizontal)
+
+            List(filteredItems, rowContent: content)
+                .onAppear(perform: applyFilter)
+        }
+    }
+
+    private func applyFilter() {
+        let cleanedFilter = filterString.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if cleanedFilter.isEmpty {
+            filteredItems = listItems
+        } else {
+            filteredItems = listItems.filter { element in
+                filterKeyPaths.contains {
+                    element[keyPath: $0]
+                        .localizedCaseInsensitiveContains(cleanedFilter)
+                }
+            }
+        }
+    }
+}
+
+fileprivate extension Binding {
+    func ifChange(_ handler: @escaping () -> Void) -> Binding<Value> {
+        Binding(
+            get: { self.wrappedValue},
+            set: { newValue in
+                self.wrappedValue = newValue
+                handler()
+            })
+    }
+}
