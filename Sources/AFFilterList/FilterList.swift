@@ -18,7 +18,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
     let image: String?
     let content: (Element) -> RowContent
 
-    /// Only data, filterKeys and RowContent is required
+    /// Only data, filterKeys and RowContent is required. Rest have defaults
     /// - Parameters:
     ///   - data: A collection of identifiable data for computing the list.
     ///   - filterKeys: Variadic String for filtering.
@@ -41,6 +41,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
     public var body: some View {
         VStack {
             HStack {
+                /// If nil is set for systemImage then text only will appear
                 if let image = image {
                     Image(systemName: image)
                         .foregroundColor(Color.secondary.opacity(0.4))
@@ -57,6 +58,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
         }
     }
 
+    /// Private function to apply the string filter to list
     private func applyFilter() {
         let cleanedFilter = filterString.trimmingCharacters(in: .whitespacesAndNewlines)
 
@@ -73,6 +75,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
     }
 }
 
+/// Extension on Binding to update the filter to applyFilter
 fileprivate extension Binding {
     func ifChange(_ handler: @escaping () -> Void) -> Binding<Value> {
         Binding(
