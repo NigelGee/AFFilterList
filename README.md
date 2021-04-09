@@ -45,7 +45,6 @@ Change the PlaceHolder
 
 ```swift
 import AFFilterList
-import AFFilterList
 import SwiftUI
 
 struct ContentView: View {
