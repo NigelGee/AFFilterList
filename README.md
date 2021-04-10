@@ -41,10 +41,6 @@ struct ContentView: View {
 }
 ```
 
-<video src="/Users/nigelgee/Movies/RocketSim/RocketSim Recording - iPhone 12 Pro Max - 2021-04-09 15.34.17.mp4"></video>
-
-
-
 Change the PlaceHolder
 
 ```swift
@@ -65,9 +61,6 @@ struct ContentView: View {
     }
 }
 ```
-
-<video src="/Users/nigelgee/Movies/RocketSim/RocketSim Recording - iPhone 12 Pro Max - 2021-04-09 15.41.03.mp4"></video>
-
 
 
 ## Credit
