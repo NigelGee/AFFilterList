@@ -41,6 +41,8 @@ struct ContentView: View {
 }![RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.31.39](README.assets/RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.31.39.gif)
 ```
 
+![Image](README.assets/Image.gif)
+
 Change the PlaceHolder
 
 ```swift
@@ -61,6 +63,8 @@ struct ContentView: View {
     }
 }![RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.34.57](README.assets/RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.34.57.gif)
 ```
+
+![TextOnly](README.assets/TextOnly.gif)
 
 ## Credit
 
