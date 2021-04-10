@@ -62,10 +62,7 @@ struct ContentView: View {
 }
 ```
 
-<<<<<<< HEAD
-=======
 
->>>>>>> f0b192b5990a0224b6956712286c15bbe439a686
 ## Credit
 
 This was base on [Paul Hudson](https://twitter.com/twostraws) who writes [Hacking with Swift](https://www.hackingwithswift.com). It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
