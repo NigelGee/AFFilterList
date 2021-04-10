@@ -70,6 +70,8 @@ struct ContentView: View {
 
 This was base on [Paul Hudson](https://twitter.com/twostraws) who writes [Hacking with Swift](https://www.hackingwithswift.com). It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
 
+I was able to do this Package with the great Video of [Creating a Swift Package in Xcode](https://youtu.be/o0fQC7JU-Ts) from [Stewart Lynch](https://twitter.com/@StewartLynch) from [CreaTech Solutions](https://www.createchsol.com).
+
 ## License
 
 This package is released under the MIT License, which is copied below.
