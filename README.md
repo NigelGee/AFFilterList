@@ -4,6 +4,10 @@
 
 - [ ] Would like text be hidden then show when screen pulled down slight as in the Setting menu on iPhone
 
+## How to Install
+
+
+
 ## Usage
 
 You need a collection of `Identifiable` data for computing the list. The `filterKeys` need to `String` but you can choose which field(s) you want to filter on.
