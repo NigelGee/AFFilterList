@@ -24,8 +24,8 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
     ///   - data: A collection of identifiable data for computing the list.
     ///   - filterKeys: Variadic String for filtering.
     ///   - placeholder: String that in the box. Default is "Search".
-    ///   - systemImage: Optional String for SF Symbol. Default is "magnifyingglass". insert nil for text only.
-    ///   - imageColor: Color for the image. Default is .secondary. Note opacity is still 0.4
+    ///   - systemImage: Optional String for SF Symbol. Default is "magnifyingglass". Insert nil for text only.
+    ///   - imageColor: Color for the image. Default is .secondary.
     ///   - rowContent: A view builder that creates the view for a single row of the list.
     public init(_ data: [Element],
          filterKeys: KeyPath<Element, String>...,
