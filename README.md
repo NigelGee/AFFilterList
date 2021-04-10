@@ -40,10 +40,10 @@ struct ContentView: View {
         }
         .listStyle(PlainListStyle())
     }
-}
+}![Image](README.assets/Image.gif)
 ```
 
-![Image](README.assets/Image.gif)
+![ImageAndText](README.assets/ImageAndText.gif)
 
 Change the PlaceHolder
 
