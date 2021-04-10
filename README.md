@@ -4,9 +4,9 @@
 
 - [ ] Would like text be hidden then show when screen pulled down slight as in the Setting menu on iPhone
 
-## How to Install
+## Installation
 
-
+Add this Swift package in Xcode using its Github repository url. (File > Swift Packages > Add Package Dependency...)
 
 ## Usage
 
@@ -41,6 +41,8 @@ struct ContentView: View {
 }
 ```
 
+![RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.31.39](README.assets/RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.31.39.gif)
+
 Change the PlaceHolder
 
 ```swift
@@ -62,6 +64,7 @@ struct ContentView: View {
 }
 ```
 
+![RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.34.57](README.assets/RocketSim Recording - iPhone 12 Pro Max - 2021-04-10 14.34.57.gif)
 
 ## Credit
 
