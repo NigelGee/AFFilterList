@@ -14,7 +14,9 @@ You need a collection of `Identifiable` data for computing the list. The `filter
 
 The default placeholder is "Search" however you can change that in call.
 
-The default SF Symbol is "magnifyingglass" however you can put any SF Symbol 
+The default SF Symbol is "magnifyingglass" however you can put any SF Symbol.
+
+The default color of sytemImage is same as text however can be changed too. 
 
 If you want text only to show then make `systemImage: nil`
 
