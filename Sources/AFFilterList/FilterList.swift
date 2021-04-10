@@ -16,7 +16,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
     let filterKeyPaths: [KeyPath<Element, String>]
     let text: LocalizedStringKey
     let image: String?
-    let color: Color
+//    let color: Color
     let content: (Element) -> RowContent
 
     /// Only data, filterKeys and RowContent is required. Rest have defaults
@@ -31,14 +31,14 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
          filterKeys: KeyPath<Element, String>...,
          placeholder: LocalizedStringKey = "Search",
          systemImage: String? = "magnifyingglass",
-         imageColor: Color = .secondary,
+//         imageColor: Color = .secondary,
          @ViewBuilder rowContent: @escaping (Element) -> RowContent
     ) {
         listItems = data
         filterKeyPaths = filterKeys
         text = placeholder
         image = systemImage
-        color = imageColor
+//        color = imageColor
         content = rowContent
     }
 
@@ -48,7 +48,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
                 /// If nil is set for systemImage then text only will appear
                 if let image = image {
                     Image(systemName: image)
-                        .foregroundColor(color.opacity(0.4))
+                        .foregroundColor(Color.secondary.opacity(0.4))
                 }
                 TextField(text, text: $filterString.ifChange(applyFilter))
             }
