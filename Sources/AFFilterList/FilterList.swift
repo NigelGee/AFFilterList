@@ -31,7 +31,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
          filterKeys: KeyPath<Element, String>...,
          placeholder: LocalizedStringKey = "Search",
          systemImage: String? = "magnifyingglass",
-         imageColor: Color = Color.secondary.opacity(0.4),
+         imageColor: Color = Color.secondary.opacity(0.4), // Match the standard text color
          @ViewBuilder rowContent: @escaping (Element) -> RowContent
     ) {
         listItems = data
