@@ -21,7 +21,7 @@ public struct FilterList<Element: Identifiable, RowContent: View>: View {
 
     /// Only data, filterKeys and RowContent is required. Rest have defaults
     /// - Parameters:
-    ///   - data: A collection of identifiable data for computing the list.
+    ///   - data: A collection of Identifiable data for computing the list.
     ///   - filterKeys: Variadic String for filtering.
     ///   - placeholder: String that in the box. Default is "Search".
     ///   - systemImage: Optional String for SF Symbol. Default is "magnifyingglass". Insert nil for text only.
