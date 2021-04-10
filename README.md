@@ -41,10 +41,6 @@ struct ContentView: View {
 }
 ```
 
-<video src="/Users/nigelgee/Movies/RocketSim/RocketSim Recording - iPhone 12 Pro Max - 2021-04-09 15.34.17.mp4"></video>
-
-
-
 Change the PlaceHolder
 
 ```swift
@@ -66,10 +62,10 @@ struct ContentView: View {
 }
 ```
 
-<video src="/Users/nigelgee/Movies/RocketSim/RocketSim Recording - iPhone 12 Pro Max - 2021-04-09 15.41.03.mp4"></video>
+<<<<<<< HEAD
+=======
 
-
-
+>>>>>>> f0b192b5990a0224b6956712286c15bbe439a686
 ## Credit
 
 This was base on [Paul Hudson](https://twitter.com/twostraws) who writes [Hacking with Swift](https://www.hackingwithswift.com). It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
